@@ -29,5 +29,8 @@
     <ClInclude Include="ncmath.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="filereader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
