@@ -73,6 +73,7 @@ int main()
     while (pr = fr2.next(), pr.label != -1) {
         cnt += 1;
         nt.LoadData(nt.NormalizeData(pr.img, 784), -1);
+        // 仅仅进行一下前向传播以获取结果
         nt.forward();
         fprintf(fp, "%d,%d\n", cnt, nt.answer());
     }
