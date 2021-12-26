@@ -10,5 +10,3 @@ template<typename T>
 inline T sigmoid_d_out(T y) {
 	return y * (1.0 - y);
 }
-
-

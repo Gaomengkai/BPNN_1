@@ -3,7 +3,10 @@
 #include <vector>
 using namespace std;
 
-using Label_img_pair = struct {
+/// <summary>
+/// 标志-图像对
+/// </summary>
+using OneImg = struct _oneimg{
 	int label;
 	std::vector<int> img;
 };
@@ -19,7 +22,11 @@ public:
 		fs.open(filename, std::ios_base::in);
 		getline(fs, line);
 	}
-	Label_img_pair next() {
+	/// <summary>
+	/// 从文件中获取下一个。
+	/// </summary>
+	/// <returns>一个图像-标志对。如果没有图像了，则label=-1</returns>
+	OneImg next() {
 		if (!getline(fs, line)) return {-1,vector<int>(0)};
 		is = istringstream(line);
 		int label = -2;
